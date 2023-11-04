@@ -1,3 +1,6 @@
+local bg = ""
+local fg = ""
+
 return {
     "akinsho/bufferline.nvim",
     lazy = false,
@@ -18,19 +21,82 @@ return {
       right_mouse_command = function(n) require("mini.bufremove").delete(n, false) end,
             diagnostics = "nvim_lsp",
             always_show_bufferline = false,
-            diagnostics_indicator = function(_, _, diag)
-                local icons = require("lazyvim.config").icons.diagnostics
-                local ret = (diag.error and icons.Error .. diag.error .. " " or "")
-                    .. (diag.warning and icons.Warn .. diag.warning or "")
-                return vim.trim(ret)
-            end,
+            indicator = {
+                style = "none",
+            },
+            themable = true,
+            color_icons = true,
+            max_name_length = 18,
+            max_prefix_length = 18,
             offsets = {
                 {
                     filetype = "neo-tree",
-                    text = "Neo-tree",
+                    text = "neo-tree",
                     highlight = "Directory",
                     text_align = "left",
                 },
+            },
+            separator_style = { "", "" },
+            buffer_close_icon = "",
+        },
+        highlights = {
+            background = {
+                fg = fg,
+                bg = bg,
+            },
+            buffer_selected = {
+                bg = bg,
+                fg = fg,
+                bold = true,
+            },
+            buffer_visible = {
+                bg = bg,
+                fg = fg,
+            },
+            close_button = {
+                bg = bg,
+            },
+            duplicate = {
+                bg = bg,
+            },
+            duplicate_selected = {
+                bg = bg,
+                fg = fg,
+                bold = true,
+            },
+            duplicate_visible = {
+                bg = bg,
+            },
+            fill = {
+                fg = fg,
+                bg = bg,
+            },
+            indicator_visible = {
+                bg = bg,
+            },
+            separator = {
+                bg = bg,
+                fg = fg,
+            },
+            separator_visible = {
+                bg = bg,
+                fg = fg,
+            },
+            close_button_visible = {
+                fg = fg,
+                bg = bg,
+            },
+            modified = {
+                fg = fg,
+                bg = bg,
+            },
+            modified_visible = {
+                fg = fg,
+                bg = bg,
+            },
+            modified_selected = {
+                fg = fg,
+                bg = bg,
             },
         },
     },

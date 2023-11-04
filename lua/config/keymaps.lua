@@ -49,6 +49,8 @@ map("i", "<A-BS>", "<nop>", {})
 -- map('v', 'e', '<nop>', {})
 map("n", "f", "<nop>", {})
 map("v", "f", "<nop>", {})
+map("n", "t", "<nop>", {})
+map("n", "T", "<nop>", {})
 
 -- map("n", "<C-CR>", "o<Esc>", {})
 -- map("n", "<C-S-CR>", "O<Esc>", {})
