@@ -5,4 +5,5 @@ return {
     { "folke/which-key.nvim", enabled = false },
     { "RRethy/vim-illuminate", enabled = false },
     { "nvim-treesitter/nvim-treesitter-context", enabled = false },
+    { "echasnovski/mini.indentscope", enabled = false },
 }
